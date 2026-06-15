@@ -15,7 +15,7 @@ const wrapAsync = require("./utils/wrapAsync.js");
 
 const ExpressError = require("./utils/ExpressError.js");
 app.use(express.static(path.join(__dirname,"public")));
-app.wrapAsync=require("./utils/wrapAsync.js");
+app.wrapAsync=require("./utils/wrapAsync.js");git push origin main
 app.ExpressError=require("./utils/ExpressError.js")
 const{listingSchema,reviewSchema}= require("./schema.js")
 const Review = require("./models/review.js");
