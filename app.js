@@ -25,7 +25,7 @@ const userRouter=require("./routes/user.js");
 const session = require('express-session');
 
 //const session =require("express-session");
-const MongoStore = require("connect-mongo").default;
+const MongoStore = require("connect-mongo");
 const reviews = require("./routes/review.js");
 const flash =require("connect-flash");
 const passport = require("passport");
@@ -74,6 +74,8 @@ const store = MongoStore.create({
   touchAfter: 24 * 3600,
 });
 
+//
+console.log("ATLASDB_URL =", process.env.ATLASDB_URL);
 store.on("error",function(e){
   console.log("session store error in mongodb session",e);
 });
