@@ -259,7 +259,7 @@ app.use((req, res, next) => {
 
 // ================= HOME ROUTE =================
 app.get("/", (req, res) => {
-  res.render("listings");
+  res.render("listings/index.ejs");
 });
 
 // ================= SEARCH ROUTE =================
