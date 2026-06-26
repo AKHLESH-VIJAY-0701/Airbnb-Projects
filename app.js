@@ -258,9 +258,9 @@ app.use((req, res, next) => {
 });
 
 // ================= HOME ROUTE =================
-// app.get("/", (req, res) => {
-//   res.render("listings/index.ejs");
-// });
+app.get("/", (req, res) => {
+  res.render("listings/index.ejs");
+});
 
 // ================= SEARCH ROUTE =================
 app.get("/search", async (req, res, next) => {
