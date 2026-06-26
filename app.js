@@ -258,8 +258,9 @@ app.use((req, res, next) => {
 });
 
 // ================= HOME ROUTE =================
-app.get("/", (req, res) => {
-  res.render("listings/index.ejs");
+app.get("/", async (req, res) => {
+  const listings = await Listing.find({});
+  res.render("listings/index", { allListings: listings });
 });
 
 // ================= SEARCH ROUTE =================
