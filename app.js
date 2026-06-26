@@ -258,10 +258,9 @@ app.use((req, res, next) => {
 });
 
 // ================= HOME ROUTE =================
-router.get("/", async (req, res) => {
-  const listings = await Listing.find({});
-  res.render("listings/index", { allListings: listings });
-});
+// app.get("/", (req, res) => {
+//   res.render("listings/index.ejs");
+// });
 
 // ================= SEARCH ROUTE =================
 app.get("/search", async (req, res, next) => {
